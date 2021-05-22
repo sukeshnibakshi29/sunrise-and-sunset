@@ -10,7 +10,7 @@ var bg ;
 
 function preload() {
     // create getBackgroundImg( ) here
-    getBackgroundImg();
+    getBackgroundimg();
 }
 
 function setup(){
@@ -32,13 +32,10 @@ function draw(){
 
 }
 
-async function getBackgroundImg(){
+async function getBackgroundimg(){
 
     // write code to fetch time from API
-    var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
-
-
-    //change the data in JSON format
+    var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
     var responseJSON = await response.json();
     var datetime = responseJSON.datetime;
 
